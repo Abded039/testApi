@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  font-family: "Tahoma, Arial", sans-serif;
+}
+
+body {
+  min-height: 1700px;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    320deg,
+    rgba(34, 193, 195, 1) 50%,
+    rgba(253, 187, 45, 1) 100%
+  );
+}
+
+.btn {
+  outline: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  margin: auto;
+  display: block;
+  margin: 30px auto;
+  background-color: #1de9b6;
+  color: #ffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #00febe;
+  }
+}
+
+.container {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 10px;
+    background-color: #0026ff4e;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+
+    .mainDiv {
+      background-color: #0026ff2b;
+      padding: 10px 15px 30px 15px;
+      border-radius: 7px;
+      line-height: 1.8;
+      position: relative;
+      cursor: pointer;
+      transition: 1s;
+      color: #fff;
+
+      &:hover {
+        background-color: #0026ff4e;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      .copyDiv {
+        padding: 5px 10px;
+        background-color: #00d0ffb8;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 0 10px 0 0;
+
+        .iconCopy {
+          font-size: 17px;
+          margin-left: 5px;
+        }
+      }
+
+      .notifyText {
+        content: "Copied !";
+        position: absolute;
+        left: 126px;
+        bottom: 0;
+        padding: 5px 10px;
+        transition: 0.3s;
+        opacity: 0;
+      }
+
+      .textQuote {
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      .authorDiv {
+        border-radius: 10px 0 0 0;
+        padding: 5px 10px;
+        background-color: orangered;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        .iconAuthor {
+          font-size: 17px;
+          margin-right: 5px;
+        }
+        .authorName {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.animate {
+  animation: showAndHide 1s linear;
+  display: block;
+}
+
+@keyframes showAndHide {
+  0% {
+    opacity: 1;
+  }
+}
